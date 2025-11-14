@@ -104,9 +104,6 @@ class FirebaseTools:
           return True       
      
      def getValue(self, nodeName: str, key: str, stringFormat: bool):
-          if not nodeName:
-               dprint(f'ERROR: getValue did not receive nodeName!')
-               return False
           data = get(self.getPath(nodeName + '/' + key) + self.linkEnd)        
           if data.status_code == 200:
                receivedData = data.json()
@@ -213,3 +210,4 @@ class FirebaseTools:
 
 if __name__ == "__main__":
      fb = FirebaseTools('', '')
+
