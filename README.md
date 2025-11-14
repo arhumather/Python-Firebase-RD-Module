@@ -46,6 +46,14 @@ To begin, copy your database link and API key and paste into the variables insid
 self.dbLink = 'https://www.exampleproject-default-rtdb.firebaseio.com/'
 self.dbKey = 'DATABASE_KEY'
 ```
+To use this module in another script you would import it as follows:
+
+```py
+#Assume that fbTools.py is the name of the file, it must also be in the same directory as the file you are writing in.
+from fbTools import FirebaseTools
+fb = FirebaseTools('', '')
+```
+
 ## Assumptions
 
 For demonstration purposes below, we will assume any variables for the functions and procedures are, hypothetically, of the following:
